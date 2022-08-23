@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+
+{% block content %}
+<div>
+	{% for item in news %}
+	<h2>{{item.title}}</h2>
+	<p>{{item.content}}</p>
+	<h3>{{item.create_at|date:"Y-m-d H:m:s"}}</h3>
+	{% endfor %}
+</div>
+
+
+{% endblock content %}
+
+</body>
+</html>
